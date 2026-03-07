@@ -1,57 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1e3a8a"/>
-      <stop offset="50%" stop-color="#3b82f6"/>
-      <stop offset="100%" stop-color="#7c3aed"/>
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
     </linearGradient>
-    <linearGradient id="kLight" x1="8" y1="4" x2="38" y2="40" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#e0e7ff"/>
+    <linearGradient id="blue" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
     </linearGradient>
-    <linearGradient id="arrow" x1="20" y1="10" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#60a5fa"/>
-      <stop offset="100%" stop-color="#c084fc"/>
+    <linearGradient id="purple" x1="0" y1="0" x2="44" y2="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
     </linearGradient>
-    <filter id="shadow">
-      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.3"/>
+    <linearGradient id="cyan" x1="0" y1="22" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="glow-blue">
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#3b82f6" flood-opacity="0.5"/>
     </filter>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="glow-purple">
+      <feDropShadow dx="0" dy="0" stdDeviation="1.5" flood-color="#8b5cf6" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glow-cyan">
+      <feDropShadow dx="0" dy="0" stdDeviation="1.5" flood-color="#06b6d4" flood-opacity="0.5"/>
     </filter>
   </defs>
 
-  <!-- Background -->
+  <!-- Dark background -->
   <rect width="44" height="44" rx="12" fill="url(#bg)"/>
-  <!-- Inner border -->
-  <rect x="1.5" y="1.5" width="41" height="41" rx="11" fill="none" stroke="white" stroke-width="0.6" opacity="0.1"/>
+  <rect x="1" y="1" width="42" height="42" rx="11" fill="none" stroke="white" stroke-width="0.4" opacity="0.08"/>
 
-  <!-- Glow behind K -->
-  <ellipse cx="22" cy="22" rx="14" ry="16" fill="white" opacity="0.06"/>
-
-  <!-- Big bold K with shadow -->
-  <g filter="url(#shadow)">
-    <!-- K vertical bar - thick & bold -->
-    <path d="M10 6 L16 6 L16 38 L10 38 Z" fill="url(#kLight)"/>
-    <!-- K upper arm -->
-    <path d="M16 20 L33 6 L39 6 L39 9 L19 22 Z" fill="url(#kLight)"/>
-    <!-- K lower arm -->
-    <path d="M16 24 L19 22 L39 38 L33 38 Z" fill="url(#kLight)"/>
+  <!-- === K VERTICAL BAR — SOFTWARE (code brackets) === -->
+  <g filter="url(#glow-blue)">
+    <rect x="8" y="6" width="5.5" height="32" rx="2" fill="url(#blue)"/>
+    <!-- Code bracket symbols on the bar -->
+    <text x="9" y="15" font-family="monospace" font-size="6" font-weight="bold" fill="white" opacity="0.6">&lt;</text>
+    <text x="9" y="34" font-family="monospace" font-size="6" font-weight="bold" fill="white" opacity="0.6">/&gt;</text>
   </g>
 
-  <!-- Speed arrow on upper arm tip -->
-  <path d="M36 6 L39 6 L39 9 Z" fill="url(#arrow)" filter="url(#glow)"/>
-  <!-- Speed arrow on lower arm tip -->
-  <path d="M36 38 L39 35 L39 38 Z" fill="url(#arrow)" filter="url(#glow)"/>
+  <!-- === K UPPER ARM — CRYPTO (blockchain chain) === -->
+  <g filter="url(#glow-purple)">
+    <!-- Main arm -->
+    <path d="M14 19 L17 17 L33 6 L37 6 L37 10.5 L18.5 22 L14 22.5 Z" fill="url(#purple)"/>
+    <!-- Blockchain nodes -->
+    <circle cx="25" cy="12.5" r="2.5" fill="#1e293b" stroke="#a78bfa" stroke-width="1.2"/>
+    <rect x="23.5" y="11" width="3" height="3" rx="0.5" fill="#a78bfa" opacity="0.8"/>
+    <!-- Chain endpoint -->
+    <circle cx="35" cy="7.5" r="2" fill="#1e293b" stroke="#a78bfa" stroke-width="1"/>
+    <circle cx="35" cy="7.5" r="0.8" fill="#a78bfa"/>
+  </g>
 
-  <!-- Transport speed lines (left side) -->
-  <line x1="3" y1="14" x2="8" y2="14" stroke="white" stroke-width="1.2" opacity="0.35" stroke-linecap="round"/>
-  <line x1="4" y1="18" x2="8" y2="18" stroke="white" stroke-width="0.8" opacity="0.25" stroke-linecap="round"/>
-  <line x1="4" y1="26" x2="8" y2="26" stroke="white" stroke-width="0.8" opacity="0.25" stroke-linecap="round"/>
-  <line x1="3" y1="30" x2="8" y2="30" stroke="white" stroke-width="1.2" opacity="0.35" stroke-linecap="round"/>
+  <!-- === K LOWER ARM — TRANSPORT (road/arrow) === -->
+  <g filter="url(#glow-cyan)">
+    <!-- Main arm as road -->
+    <path d="M14 22 L18.5 22 L34 36 L37 38 L30 38 Z" fill="url(#cyan)"/>
+    <!-- Road dashes -->
+    <line x1="20" y1="27" x2="22" y2="29" stroke="#0f172a" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <line x1="24" y1="31" x2="26" y2="33" stroke="#0f172a" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <!-- Speed arrow head -->
+    <path d="M34 36 L37 38 L37 34 Z" fill="#22d3ee"/>
+    <!-- Speed lines -->
+    <line x1="29" y1="38" x2="34" y2="38" stroke="#22d3ee" stroke-width="0.8" opacity="0.5" stroke-linecap="round"/>
+    <line x1="31" y1="36" x2="34" y2="36" stroke="#22d3ee" stroke-width="0.6" opacity="0.4" stroke-linecap="round"/>
+  </g>
 
-  <!-- Tech dot accents -->
-  <circle cx="39" cy="6" r="1.2" fill="white" opacity="0.6"/>
-  <circle cx="39" cy="38" r="1.2" fill="white" opacity="0.6"/>
+  <!-- Center hub (K junction - connection point) -->
+  <circle cx="15" cy="22" r="3.5" fill="#0f172a" stroke="url(#blue)" stroke-width="1.2"/>
+  <circle cx="15" cy="22" r="1.5" fill="url(#blue)"/>
 </svg>
