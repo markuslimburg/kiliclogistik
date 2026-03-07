@@ -181,13 +181,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== Language Switch (placeholder) =====
+    // ===== Language Switch =====
+    let currentLang = localStorage.getItem('lang') || 'tr';
+
+    function switchLanguage(lang) {
+        if (!translations[lang]) return;
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+
+        const dict = translations[lang];
+
+        // Text content
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (dict[key]) el.textContent = dict[key];
+        });
+
+        // HTML content (for elements with <strong> etc.)
+        document.querySelectorAll('[data-i18n-html]').forEach(el => {
+            const key = el.getAttribute('data-i18n-html');
+            if (dict[key]) el.innerHTML = dict[key];
+        });
+
+        // Placeholders
+        document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+            const key = el.getAttribute('data-i18n-ph');
+            if (dict[key]) el.placeholder = dict[key];
+        });
+
+        // Update active button
+        document.querySelectorAll('.lang-btn').forEach(b => {
+            b.classList.toggle('active-lang', b.getAttribute('data-lang') === lang);
+        });
+    }
+
+    // Apply saved language on load
+    if (currentLang !== 'tr') {
+        switchLanguage(currentLang);
+    } else {
+        document.querySelectorAll('.lang-btn').forEach(b => {
+            b.classList.toggle('active-lang', b.getAttribute('data-lang') === 'tr');
+        });
+    }
+
     const langBtns = document.querySelectorAll('.lang-btn');
     langBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            langBtns.forEach(b => b.classList.remove('active-lang'));
-            btn.classList.add('active-lang');
-            // Language switching logic can be added here
+            switchLanguage(btn.getAttribute('data-lang'));
         });
     });
 
