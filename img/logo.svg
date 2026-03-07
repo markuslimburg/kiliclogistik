@@ -1,41 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#3b82f6"/>
-      <stop offset="100%" stop-color="#8b5cf6"/>
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
     </linearGradient>
-    <linearGradient id="kGrad" x1="10" y1="8" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+    <linearGradient id="kLight" x1="8" y1="4" x2="38" y2="40" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c7d2fe"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
     </linearGradient>
+    <linearGradient id="arrow" x1="20" y1="10" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
+
   <!-- Background -->
   <rect width="44" height="44" rx="12" fill="url(#bg)"/>
-  <rect x="1.5" y="1.5" width="41" height="41" rx="11" fill="none" stroke="white" stroke-width="0.5" opacity="0.12"/>
+  <!-- Inner border -->
+  <rect x="1.5" y="1.5" width="41" height="41" rx="11" fill="none" stroke="white" stroke-width="0.6" opacity="0.1"/>
 
-  <!-- Modern K letter -->
-  <g filter="url(#glow)">
-    <!-- K vertical stroke -->
-    <path d="M13 8 L17 8 L17 36 L13 36 Z" fill="url(#kGrad)" opacity="0.95"/>
-    <!-- K upper diagonal (arrow-like for transport/speed) -->
-    <path d="M17 21 L31 8 L35 8 L35 12 L21 23 Z" fill="url(#kGrad)" opacity="0.9"/>
-    <!-- K lower diagonal with arrow tip (movement/forward) -->
-    <path d="M17 23 L21 21 L32 33 L35 36 L30 36 Z" fill="url(#kGrad)" opacity="0.9"/>
-    <!-- Speed arrow tip -->
-    <path d="M35 36 L35 30 L32 33 Z" fill="white" opacity="0.7"/>
+  <!-- Glow behind K -->
+  <ellipse cx="22" cy="22" rx="14" ry="16" fill="white" opacity="0.06"/>
+
+  <!-- Big bold K with shadow -->
+  <g filter="url(#shadow)">
+    <!-- K vertical bar - thick & bold -->
+    <path d="M10 6 L16 6 L16 38 L10 38 Z" fill="url(#kLight)"/>
+    <!-- K upper arm -->
+    <path d="M16 20 L33 6 L39 6 L39 9 L19 22 Z" fill="url(#kLight)"/>
+    <!-- K lower arm -->
+    <path d="M16 24 L19 22 L39 38 L33 38 Z" fill="url(#kLight)"/>
   </g>
 
-  <!-- Digital/tech circuit dots -->
-  <circle cx="35" cy="10" r="1.5" fill="white" opacity="0.5"/>
-  <circle cx="9" cy="22" r="1" fill="white" opacity="0.3"/>
-  
-  <!-- Subtle speed lines (transport feel) -->
-  <line x1="5" y1="16" x2="10" y2="16" stroke="white" stroke-width="0.8" opacity="0.2" stroke-linecap="round"/>
-  <line x1="6" y1="19" x2="10" y2="19" stroke="white" stroke-width="0.6" opacity="0.15" stroke-linecap="round"/>
-  <line x1="7" y1="25" x2="10" y2="25" stroke="white" stroke-width="0.6" opacity="0.15" stroke-linecap="round"/>
-  <line x1="5" y1="28" x2="10" y2="28" stroke="white" stroke-width="0.8" opacity="0.2" stroke-linecap="round"/>
+  <!-- Speed arrow on upper arm tip -->
+  <path d="M36 6 L39 6 L39 9 Z" fill="url(#arrow)" filter="url(#glow)"/>
+  <!-- Speed arrow on lower arm tip -->
+  <path d="M36 38 L39 35 L39 38 Z" fill="url(#arrow)" filter="url(#glow)"/>
+
+  <!-- Transport speed lines (left side) -->
+  <line x1="3" y1="14" x2="8" y2="14" stroke="white" stroke-width="1.2" opacity="0.35" stroke-linecap="round"/>
+  <line x1="4" y1="18" x2="8" y2="18" stroke="white" stroke-width="0.8" opacity="0.25" stroke-linecap="round"/>
+  <line x1="4" y1="26" x2="8" y2="26" stroke="white" stroke-width="0.8" opacity="0.25" stroke-linecap="round"/>
+  <line x1="3" y1="30" x2="8" y2="30" stroke="white" stroke-width="1.2" opacity="0.35" stroke-linecap="round"/>
+
+  <!-- Tech dot accents -->
+  <circle cx="39" cy="6" r="1.2" fill="white" opacity="0.6"/>
+  <circle cx="39" cy="38" r="1.2" fill="white" opacity="0.6"/>
 </svg>
