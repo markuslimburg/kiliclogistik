@@ -180,23 +180,30 @@ img {
 
 .lang-btn {
     background: none;
-    border: 1px solid transparent;
-    color: var(--text-muted);
-    font-family: var(--font);
-    font-size: 18px;
+    border: 2px solid transparent;
     cursor: pointer;
-    padding: 4px 6px;
+    padding: 3px 4px;
     border-radius: 6px;
     transition: var(--transition);
-    line-height: 1;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+}
+
+.lang-btn img {
+    border-radius: 2px;
+    display: block;
 }
 
 .lang-btn:hover {
+    opacity: 1;
     background: rgba(59, 130, 246, 0.1);
     border-color: var(--border-light);
 }
 
 .lang-btn.active-lang {
+    opacity: 1;
     background: rgba(59, 130, 246, 0.15);
     border-color: var(--accent);
     box-shadow: 0 0 8px var(--accent-glow);
