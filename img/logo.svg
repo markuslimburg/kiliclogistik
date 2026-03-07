@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="sword" x1="14" y1="8" x2="30" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect width="44" height="44" rx="12" fill="url(#bg)"/>
+  <!-- Sword blade (kılıç) -->
+  <path d="M22 6 L25 10 L23.5 26 L22 28 L20.5 26 L19 10 Z" fill="url(#sword)" opacity="0.95"/>
+  <!-- Sword guard (crossguard) -->
+  <rect x="15" y="26" width="14" height="3" rx="1.5" fill="white" opacity="0.9"/>
+  <!-- Sword handle -->
+  <rect x="20" y="29" width="4" height="5" rx="1" fill="white" opacity="0.8"/>
+  <!-- Sword pommel -->
+  <circle cx="22" cy="36" r="2.5" fill="white" opacity="0.85"/>
+  <!-- Blockchain/crypto dots on sides -->
+  <circle cx="10" cy="14" r="1.8" fill="white" opacity="0.4"/>
+  <circle cx="10" cy="22" r="1.8" fill="white" opacity="0.3"/>
+  <circle cx="10" cy="30" r="1.8" fill="white" opacity="0.2"/>
+  <line x1="10" y1="15.8" x2="10" y2="20.2" stroke="white" stroke-width="0.8" opacity="0.3"/>
+  <line x1="10" y1="23.8" x2="10" y2="28.2" stroke="white" stroke-width="0.8" opacity="0.25"/>
+  <circle cx="34" cy="14" r="1.8" fill="white" opacity="0.4"/>
+  <circle cx="34" cy="22" r="1.8" fill="white" opacity="0.3"/>
+  <circle cx="34" cy="30" r="1.8" fill="white" opacity="0.2"/>
+  <line x1="34" y1="15.8" x2="34" y2="20.2" stroke="white" stroke-width="0.8" opacity="0.3"/>
+  <line x1="34" y1="23.8" x2="34" y2="28.2" stroke="white" stroke-width="0.8" opacity="0.25"/>
+</svg>
