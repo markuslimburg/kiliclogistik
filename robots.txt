@@ -1,3 +1,6 @@
+# Kilic Logistics — Freight Forwarding & Carrier Network
+# Eski sürüm ve mockup sayfaları meta robots "noindex" ile işaretlidir.
 User-agent: *
 Allow: /
+
 Sitemap: https://markuslimburg.github.io/kiliclogistik/sitemap.xml

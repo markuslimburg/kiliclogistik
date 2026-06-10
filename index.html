@@ -1,602 +1,542 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KILIÇ KRİPTO TRANSPORT | Lojistik, Bilişim & Teknoloji A.Ş.</title>
-    <meta name="description" content="Kılıç Kripto Transport - Taşımacılık, Yazılım ve Kripto çözümleri. Aksaray Ortaköy ve Almanya merkezli lojistik ve teknoloji şirketi.">
-    <meta name="keywords" content="taşımacılık, lojistik, kripto, yazılım, transport, Aksaray, Almanya, Kılıç Logistik">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kilic Logistics | Freight Forwarding &amp; Carrier Network</title>
+<meta name="description" content="Kilic Logistics organizes freight forwarding, carrier network and road transport solutions between Germany, Türkiye and Europe.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://markuslimburg.github.io/kiliclogistik/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kilic Logistics">
+<meta property="og:title" content="Kilic Logistics | Freight Forwarding &amp; Carrier Network">
+<meta property="og:description" content="Kilic Logistics organizes freight forwarding, carrier network and road transport solutions between Germany, Türkiye and Europe.">
+<meta property="og:url" content="https://markuslimburg.github.io/kiliclogistik/">
+<meta property="og:locale" content="en_US">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kilic Logistics | Freight Forwarding &amp; Carrier Network">
+<meta name="twitter:description" content="Kilic Logistics organizes freight forwarding, carrier network and road transport solutions between Germany, Türkiye and Europe.">
+<!-- JSON-LD: Organization + WebSite (Google site name kaynağı) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://markuslimburg.github.io/kiliclogistik/#org",
+      "name": "Kilic Logistics",
+      "legalName": "KILIÇ KRİPTO TRANSPORT LOJİSTİK BİLİŞİM VE TEKNOLOJİLERİ A.Ş.",
+      "alternateName": ["Kilic Logistik", "Kılıç Lojistik"],
+      "url": "https://markuslimburg.github.io/kiliclogistik/",
+      "description": "Kilic Logistics organizes freight forwarding, carrier network and road transport solutions between Germany, Türkiye and Europe.",
+      "areaServed": ["Germany", "Türkiye", "Europe"],
+      "knowsLanguage": ["en", "de", "tr"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://markuslimburg.github.io/kiliclogistik/#website",
+      "url": "https://markuslimburg.github.io/kiliclogistik/",
+      "name": "Kilic Logistics",
+      "alternateName": "Kilic Logistics | Freight Forwarding & Carrier Network",
+      "publisher": { "@id": "https://markuslimburg.github.io/kiliclogistik/#org" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --navy:#0b1626;
+    --navy-2:#0e1c31;
+    --navy-3:#13243d;
+    --gold:#e3b04b;
+    --gold-2:#c9952f;
+    --ink:#101828;
+    --muted:#5b6675;
+    --line:#e6e9ee;
+    --bg:#f4f6f9;
+    --white:#ffffff;
+    --glow:#4da3ff;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(11,22,38,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+  img,svg{display:block}
+  a{text-decoration:none;color:inherit}
+  .container{max-width:1280px;margin:0 auto;padding:0 24px}
+
+  /* ============ NAVBAR ============ */
+  header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(227,176,75,.25)}
+  .nav{display:flex;align-items:center;gap:28px;height:76px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .logo-k{width:44px;height:44px;flex:none}
+  .brand-name{color:#fff;font-size:1.35rem;font-weight:700;letter-spacing:.22em}
+  .brand-sub{color:var(--gold);font-size:.6rem;letter-spacing:.42em;font-weight:600}
+  nav.menu{display:flex;gap:30px;margin-left:auto}
+  nav.menu a{color:#cfd6e0;font-size:.95rem;font-weight:500;padding:8px 2px;border-bottom:2px solid transparent;transition:.2s}
+  nav.menu a:hover{color:#fff;border-color:var(--gold)}
+  .nav-right{display:flex;align-items:center;gap:14px;margin-left:10px}
+  .lang{display:flex;align-items:center;gap:8px;color:#cfd6e0;font-size:.85rem;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 14px;cursor:pointer}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.95rem;border-radius:10px;padding:13px 22px;cursor:pointer;border:0;transition:.2s}
+  .btn .arr{transition:transform .2s}
+  .btn:hover .arr{transform:translateX(4px)}
+  .btn-gold{background:linear-gradient(180deg,var(--gold),var(--gold-2));color:#1a1405}
+  .btn-gold:hover{filter:brightness(1.07)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .hamburger{display:none;margin-left:auto;background:none;border:0;cursor:pointer;padding:6px}
+  .hamburger span{display:block;width:26px;height:2.5px;background:#fff;margin:6px 0;border-radius:2px}
+  /* future: Fleet Services nav item will be added here */
+
+  /* ============ HERO ============ */
+  .hero{position:relative;background:
+      radial-gradient(1100px 600px at 78% 18%, #1c3a63 0%, transparent 55%),
+      radial-gradient(900px 500px at 95% 80%, #122a47 0%, transparent 60%),
+      linear-gradient(180deg,#0c1830 0%, #0a1322 70%, #091020 100%);
+    color:#fff;overflow:hidden}
+  .hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,560px) 1fr;gap:30px;padding:84px 0 130px}
+  .eyebrow{display:flex;align-items:center;gap:12px;color:var(--gold);font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:22px}
+  .eyebrow::before{content:"";width:34px;height:2px;background:var(--gold)}
+  h1{font-size:clamp(2.2rem,4.2vw,3.6rem);line-height:1.12;font-weight:800;letter-spacing:-.5px}
+  h1 .gold{color:var(--gold)}
+  .h1-sub{margin-top:12px;color:var(--gold);font-weight:700;letter-spacing:.08em;font-size:clamp(.92rem,1.4vw,1.05rem)}
+  .hero-slogan{margin-top:20px;font-size:clamp(1.25rem,2.2vw,1.8rem);line-height:1.3;font-weight:700;color:#e8edf5;letter-spacing:-.2px}
+  .hero-slogan .gold{color:var(--gold)}
+  .hero p.lead{margin:18px 0 30px;color:#b9c4d4;font-size:1.06rem;max-width:480px}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+
+  /* hero map */
+  .hero-map{position:absolute;inset:0;pointer-events:none}
+  .hero-map svg{width:100%;height:100%}
+  .badge{position:absolute;display:flex;align-items:center;gap:10px;background:rgba(13,25,45,.85);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px);border-radius:12px;padding:10px 16px;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+  .badge .flag{width:30px;height:20px;border-radius:4px;overflow:hidden;flex:none}
+  .badge b{font-size:.85rem;letter-spacing:.06em}
+  .badge small{display:block;color:#8fa0b8;font-size:.7rem}
+  .badge-de{top:14%;left:50%}
+  .badge-tr{top:55%;right:6%}
+
+  /* stats card */
+  .hero-bottom{position:relative;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding-bottom:64px;flex-wrap:wrap}
+  .stats-card{display:flex;background:rgba(13,25,45,.88);border:1px solid rgba(255,255,255,.10);border-radius:16px;backdrop-filter:blur(8px);overflow:hidden}
+  .stat{padding:22px 28px;display:flex;flex-direction:column;gap:6px;border-right:1px solid rgba(255,255,255,.08);min-width:150px}
+  .stat:last-child{border-right:0}
+  .stat .ic{color:var(--gold);margin-bottom:4px}
+  .stat b{font-size:1.5rem;font-weight:800}
+  .stat span{color:#8fa0b8;font-size:.8rem}
+
+  /* track box */
+  .track-box{background:rgba(10,18,32,.92);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:22px 24px;backdrop-filter:blur(8px);min-width:340px;flex:0 1 430px}
+  .track-box h3{font-size:1rem;margin-bottom:14px}
+  .track-form{display:flex;gap:10px}
+  .track-form input{flex:1;background:#0e1c31;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:12px 14px;color:#fff;font-size:.9rem;outline:none}
+  .track-form input::placeholder{color:#64748d}
+  .track-form input:focus{border-color:var(--gold)}
+  .track-msg{margin-top:10px;font-size:.8rem;color:var(--gold);min-height:1em}
+
+  /* ============ SERVICES ============ */
+  .services{padding:64px 0 10px}
+  .cards-5{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+  .scard{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);transition:transform .2s, box-shadow .2s;display:flex;flex-direction:column;gap:10px}
+  .scard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(11,22,38,.14)}
+  .scard .icon{width:52px;height:52px;border-radius:12px;background:var(--navy);display:grid;place-items:center;color:var(--gold);margin-bottom:6px}
+  .scard h3{font-size:1.02rem}
+  .scard p{color:var(--muted);font-size:.88rem;flex:1}
+  .scard a{color:var(--ink);font-weight:600;font-size:.88rem}
+  .scard a .arr{color:var(--gold)}
+  .scard a:hover{color:var(--gold-2)}
+
+  /* ============ NETWORK + PERFORMANCE ============ */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:48px 0 30px}
+  .network-card{background:linear-gradient(135deg,#0d1b30,#0a1322);border-radius:var(--radius);color:#fff;padding:44px 42px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+  .network-card .map-bg{position:absolute;right:-30px;top:0;bottom:0;width:55%;opacity:.9;pointer-events:none}
+  .k-eyebrow{color:var(--gold);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px}
+  .network-card h2{font-size:1.7rem;margin-bottom:16px;max-width:60%}
+  .network-card p{color:#b9c4d4;font-size:.95rem;max-width:55%;flex:1}
+  .corridor-chip{display:inline-flex;align-items:center;gap:10px;background:rgba(227,176,75,.12);border:1px solid rgba(227,176,75,.4);color:var(--gold);border-radius:999px;padding:8px 16px;font-size:.82rem;font-weight:600;margin:18px 0;width:max-content}
+  .network-card .link{color:var(--gold);font-weight:700;font-size:.92rem;margin-top:6px;width:max-content}
+  .perf-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:44px 42px;box-shadow:var(--shadow)}
+  .perf-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:34px}
+  .perf-card h2{font-size:1.7rem}
+  .select{border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:.85rem;background:#fff;color:var(--ink)}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .kpi{text-align:center}
+  .kpi .ring{width:74px;height:74px;border-radius:50%;border:1.5px solid #d8dee6;display:grid;place-items:center;margin:0 auto 14px;color:var(--navy)}
+  .kpi b{display:block;font-size:1.45rem;font-weight:800}
+  .kpi span{color:var(--muted);font-size:.8rem}
+
+  /* ============ QUOTE ============ */
+  .quote{padding:40px 0 70px}
+  .quote-card{background:var(--navy);border-radius:var(--radius);color:#fff;padding:50px;display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+  .quote-card::after{content:"";position:absolute;right:-80px;top:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(227,176,75,.18),transparent 70%)}
+  .quote-card h2{font-size:1.9rem;margin-bottom:14px}
+  .quote-card p{color:#b9c4d4;font-size:.95rem}
+  .qform{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative;z-index:1}
+  .qform input,.qform select{background:#0e1c31;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:13px 14px;color:#fff;font-size:.9rem;outline:none;width:100%}
+  .qform input:focus,.qform select:focus{border-color:var(--gold)}
+  .qform .full{grid-column:1/-1}
+  .qform button{grid-column:1/-1;justify-content:center}
+  .qmsg{grid-column:1/-1;font-size:.82rem;color:var(--gold);min-height:1em}
+
+  /* ============ FOOTER ============ */
+  footer{background:#091020;color:#8fa0b8;padding:54px 0 28px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08)}
+  footer h4{color:#fff;font-size:.95rem;margin-bottom:14px}
+  footer a{display:block;font-size:.88rem;padding:4px 0;color:#8fa0b8}
+  footer a:hover{color:var(--gold)}
+  .foot-brand p{font-size:.86rem;margin-top:12px;max-width:300px}
+  .foot-bottom{display:flex;justify-content:space-between;gap:14px;padding-top:22px;font-size:.8rem;flex-wrap:wrap}
+  /* future: Fleet Services module section placeholder */
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease}
+  .reveal.show{opacity:1;transform:none}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1100px){
+    .cards-5{grid-template-columns:repeat(3,1fr)}
+    .duo{grid-template-columns:1fr}
+    .network-card h2,.network-card p{max-width:100%}
+    .network-card .map-bg{opacity:.25;width:80%}
+    .badge-de{left:58%}
+  }
+  @media (max-width:900px){
+    nav.menu{position:fixed;inset:76px 0 auto 0;background:var(--navy);flex-direction:column;gap:0;padding:10px 24px 20px;display:none;border-bottom:1px solid rgba(227,176,75,.3)}
+    nav.menu.open{display:flex}
+    nav.menu a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+    .hamburger{display:block}
+    .nav-right .btn{display:none}
+    .hero-inner{grid-template-columns:1fr;padding:60px 0 90px}
+    .badge-de,.badge-tr{display:none}
+    .quote-card{grid-template-columns:1fr;padding:36px 26px}
+  }
+  @media (max-width:640px){
+    .cards-5{grid-template-columns:1fr 1fr}
+    .kpis{grid-template-columns:1fr 1fr;row-gap:28px}
+    .stats-card{flex-wrap:wrap}
+    .stat{min-width:46%;border-bottom:1px solid rgba(255,255,255,.08)}
+    .track-box{min-width:0;flex:1 1 100%}
+    .qform{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:440px){
+    .cards-5{grid-template-columns:1fr}
+  }
+</style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="#hero" class="logo">
-                <div class="logo-icon">
-                    <img src="img/logo.svg" alt="Kılıç Logo" width="44" height="44">
-                </div>
-                <div class="logo-text">
-                    <span class="logo-main">KILIÇ</span>
-                    <span class="logo-sub">KRİPTO TRANSPORT</span>
-                </div>
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#hero" class="active" data-i18n="navHome">Ana Sayfa</a></li>
-                <li><a href="#hizmetler" data-i18n="navServices">Hizmetler</a></li>
-                <li><a href="#hakkimizda" data-i18n="navAbout">Hakkımızda</a></li>
-                <li><a href="#lokasyonlar" data-i18n="navLocations">Lokasyonlar</a></li>
-                <li><a href="#iletisim" data-i18n="navContact">İletişim</a></li>
-                <li class="lang-switch">
-                    <button class="lang-btn active-lang" data-lang="tr"><img src="https://flagcdn.com/w40/tr.png" alt="TR" width="24" height="16"></button>
-                    <button class="lang-btn" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="DE" width="24" height="16"></button>
-                    <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="EN" width="24" height="16"></button>
-                    <button class="lang-btn" data-lang="zh"><img src="https://flagcdn.com/w40/cn.png" alt="ZH" width="24" height="16"></button>
-                </li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+<!-- ================= NAVBAR ================= -->
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="Kilic Logistics">
+      <svg class="logo-k" viewBox="0 0 48 48" fill="none">
+        <path d="M8 4 H16 V44 H8 Z" fill="#e3b04b"/>
+        <path d="M20 24 L38 4 H30 L16 20 V28 L30 44 H38 Z" fill="#e3b04b"/>
+        <path d="M24 24 L40 8 H44 L28 24 L44 40 H40 Z" fill="#c9952f"/>
+      </svg>
+      <span>
+        <span class="brand-name">KILIÇ</span><br>
+        <span class="brand-sub">LOGISTICS</span>
+      </span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#services">Services</a>
+      <a href="#network">Network</a>
+      <a href="#performance">Solutions</a>
+      <a href="#about">About Us</a>
+      <a href="#quote">Contact</a>
+      <!-- future: <a href="#fleet">Fleet Services</a> -->
     </nav>
+    <div class="nav-right">
+      <span class="lang">🌐 EN ▾</span>
+      <a class="btn btn-gold" href="#quote">Request a Quote <span class="arr">→</span></a>
+    </div>
+    <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg">
-            <div class="hero-particles" id="particles"></div>
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <!-- glowing Europe map -->
+  <div class="hero-map">
+    <svg viewBox="0 0 1440 760" preserveAspectRatio="xMaxYMid slice">
+      <defs>
+        <radialGradient id="dotGlow" cx=".5" cy=".5" r=".5">
+          <stop offset="0" stop-color="#7cc1ff"/><stop offset="1" stop-color="#7cc1ff" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#6db5ff"/><stop offset="1" stop-color="#e3b04b"/>
+        </linearGradient>
+        <filter id="blur1"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <g id="euDots" opacity=".85"></g>
+      <!-- DE -> TR corridor -->
+      <path id="corridor" d="M900 170 C 1010 220, 1090 330, 1185 430" stroke="url(#route)" stroke-width="3" fill="none" stroke-dasharray="10 8" opacity=".95">
+        <animate attributeName="stroke-dashoffset" from="180" to="0" dur="4s" repeatCount="indefinite"/>
+      </path>
+      <path d="M900 170 C 1010 220, 1090 330, 1185 430" stroke="#6db5ff" stroke-width="9" fill="none" opacity=".18" filter="url(#blur1)"/>
+      <circle cx="900" cy="170" r="22" fill="url(#dotGlow)"/>
+      <circle cx="900" cy="170" r="5" fill="#bfe0ff"/>
+      <circle cx="1185" cy="430" r="26" fill="url(#dotGlow)"/>
+      <circle cx="1185" cy="430" r="5.5" fill="#ffd98a"/>
+    </svg>
+  </div>
+
+  <div class="badge badge-de"><span class="flag"><svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#000"/><rect y="6.7" width="30" height="6.6" fill="#dd0000"/><rect y="13.3" width="30" height="6.7" fill="#ffce00"/></svg></span><span><b>GERMANY</b><small>DE</small></span></div>
+  <div class="badge badge-tr"><span class="flag"><svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#e30a17"/><circle cx="11" cy="10" r="5" fill="#fff"/><circle cx="12.4" cy="10" r="4" fill="#e30a17"/><path d="M16.5 10 l4.2 1.4 -2.6-3.6 v4.4 l2.6-3.6 Z" fill="#fff"/></svg></span><span><b>TÜRKİYE</b><small>TR</small></span></div>
+
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Your trusted freight forwarding partner</div>
+        <h1>Kilic <span class="gold">Logistics</span></h1>
+        <p class="h1-sub">Freight Forwarding &amp; Carrier Network — Germany ↔ Türkiye ↔ Europe</p>
+        <h2 class="hero-slogan">Moving Europe. Connecting Worlds. <span class="gold">Delivering Excellence.</span></h2>
+        <p class="lead">Kilic Logistics arranges premium road freight between Germany, Europe and Türkiye through a vetted carrier network. Smart. Reliable. On time.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-gold" href="#quote">Request a Quote <span class="arr">→</span></a>
+          <a class="btn btn-ghost" href="#services">Explore Services <span class="arr">→</span></a>
         </div>
-        <div class="container hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-bolt"></i> <span data-i18n="heroBadge">Lojistik • Bilişim • Teknoloji</span>
-            </div>
-            <h1 class="hero-title">
-                <span class="title-line" data-i18n="heroTitle1">Taşımacılıkta</span>
-                <span class="title-line gradient-text" data-i18n="heroTitle2">Geleceği İnşa Ediyoruz</span>
-            </h1>
-            <p class="hero-desc" data-i18n="heroDesc">
-                Türkiye ve Almanya merkezli, uluslararası taşımacılık, yazılım çözümleri ve 
-                kripto teknolojileri ile iş dünyasına yön veriyoruz.
-            </p>
-            <div class="hero-buttons">
-                <a href="#hizmetler" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i> <span data-i18n="heroBtn1">Hizmetlerimiz</span>
-                </a>
-                <a href="#iletisim" class="btn btn-outline">
-                    <i class="fas fa-paper-plane"></i> <span data-i18n="heroBtn2">Bize Ulaşın</span>
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span>
-                    <span class="stat-label" data-i18n="statYears">Yıllık Tecrübe</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-num" data-target="2">0</span>
-                    <span class="stat-label" data-i18n="statCountry">Ülke</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-num" data-target="3">0</span>
-                    <span class="stat-label" data-i18n="statService">Hizmet Alanı</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-num" data-target="7">0</span><span class="stat-plus">/24</span>
-                    <span class="stat-label" data-i18n="statSupport">Destek</span>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hizmetler Section -->
-    <section class="section hizmetler" id="hizmetler">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" data-i18n="sectionServices">Çözümlerimiz</span>
-                <h2 class="section-title" data-i18n="servicesTitle">Hizmet Alanlarımız</h2>
-                <p class="section-desc" data-i18n="servicesDesc">Üç ana alanda uzmanlaşarak, müşterilerimize kapsamlı çözümler sunuyoruz.</p>
-            </div>
-            <div class="services-grid">
-                <!-- Taşımacılık -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=600&h=340&fit=crop" alt="MAN LKW Taşımacılık" loading="lazy">
-                        <div class="service-image-overlay">
-                            <span><i class="fas fa-truck-fast"></i> Lojistik</span>
-                        </div>
-                    </div>
-                    <div class="service-icon transport">
-                        <i class="fas fa-truck-fast"></i>
-                    </div>
-                    <h3 data-i18n="serviceTransportTitle">Taşımacılık & Lojistik</h3>
-                    <p data-i18n="serviceTransportDesc">Türkiye-Almanya hattında güvenilir kara yolu taşımacılığı. Parsiyel, komple ve proje taşımacılığı çözümleri.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceTransportF1">Uluslararası Karayolu Taşımacılığı</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceTransportF2">Parsiyel & Komple Yük</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceTransportF3">Depolama & Dağıtım</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceTransportF4">Gümrük İşlemleri</span></li>
-                    </ul>
-                    <a href="#" class="service-link" data-modal="modal-transport">
-                        <span data-i18n="detailBtn">Detaylı Bilgi</span> <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Yazılım -->
-                <div class="service-card featured" data-aos="fade-up" data-aos-delay="100">
-                    <div class="featured-badge" data-i18n="popularBadge">Popüler</div>
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=340&fit=crop" alt="Yazılım Geliştirme" loading="lazy">
-                        <div class="service-image-overlay">
-                            <span><i class="fas fa-code"></i> Yazılım</span>
-                        </div>
-                    </div>
-                    <div class="service-icon software">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 data-i18n="serviceSoftwareTitle">Yazılım & Bilişim</h3>
-                    <p data-i18n="serviceSoftwareDesc">Modern web uygulamaları, mobil çözümler ve kurumsal yazılım geliştirme hizmetleri.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceSoftwareF1">Web & Mobil Uygulama</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceSoftwareF2">E-Ticaret Çözümleri</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceSoftwareF3">Kurumsal Yazılım (ERP/CRM)</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceSoftwareF4">API & Entegrasyon</span></li>
-                    </ul>
-                    <a href="#" class="service-link" data-modal="modal-software">
-                        <span data-i18n="detailBtn">Detaylı Bilgi</span> <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Kripto -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=340&fit=crop" alt="Kripto Blockchain" loading="lazy">
-                        <div class="service-image-overlay">
-                            <span><i class="fab fa-bitcoin"></i> Kripto</span>
-                        </div>
-                    </div>
-                    <div class="service-icon crypto">
-                        <i class="fab fa-bitcoin"></i>
-                    </div>
-                    <h3 data-i18n="serviceCryptoTitle">Kripto & Blockchain</h3>
-                    <p data-i18n="serviceCryptoDesc">Blockchain teknolojileri, kripto para danışmanlığı ve merkeziyetsiz finans (DeFi) çözümleri.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceCryptoF1">Blockchain Danışmanlığı</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceCryptoF2">Akıllı Kontrat Geliştirme</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceCryptoF3">Kripto Ödeme Sistemleri</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="serviceCryptoF4">DeFi Çözümleri</span></li>
-                    </ul>
-                    <a href="#" class="service-link" data-modal="modal-crypto">
-                        <span data-i18n="detailBtn">Detaylı Bilgi</span> <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hakkımızda Section -->
-    <section class="section hakkimizda" id="hakkimizda">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <span class="section-badge" data-i18n="aboutBadge">Biz Kimiz?</span>
-                    <h2 class="section-title left-align">Kılıç Kripto Transport<br><span class="gradient-text">Logistik Bilişim ve Teknoloji A.Ş.</span></h2>
-                    <p class="about-text" data-i18n-html="aboutText">
-                        2019 yılında Aksaray Ortaköy'de kurulan şirketimiz, Almanya'daki <strong>Kılıç Logistik</strong> markamızla 
-                        Avrupa'da güçlü bir varlık göstermektedir. Taşımacılık sektöründeki köklü deneyimimizi, 
-                        yazılım ve kripto teknolojileri ile birleştirerek, geleceğin iş modellerini bugünden inşa ediyoruz.
-                    </p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <div class="feature-icon"><i class="fas fa-globe-europe"></i></div>
-                            <div>
-                                <h4 data-i18n="aboutFeat1Title">Uluslararası Operasyon</h4>
-                                <p data-i18n="aboutFeat1Desc">Türkiye ve Almanya'da aktif ofisler</p>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <div class="feature-icon"><i class="fas fa-handshake"></i></div>
-                            <div>
-                                <h4 data-i18n="aboutFeat2Title">Güvenilir İş Ortağı</h4>
-                                <p data-i18n="aboutFeat2Desc">Müşteri memnuniyeti odaklı hizmet</p>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <div class="feature-icon"><i class="fas fa-microchip"></i></div>
-                            <div>
-                                <h4 data-i18n="aboutFeat3Title">Teknoloji Odaklı</h4>
-                                <p data-i18n="aboutFeat3Desc">Modern çözümler ve inovasyon</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-visual">
-                    <div class="about-card card-1">
-                        <i class="fas fa-truck-moving"></i>
-                        <span data-i18n="aboutCard1">Lojistik</span>
-                    </div>
-                    <div class="about-card card-2">
-                        <i class="fas fa-laptop-code"></i>
-                        <span data-i18n="aboutCard2">Yazılım</span>
-                    </div>
-                    <div class="about-card card-3">
-                        <i class="fas fa-coins"></i>
-                        <span data-i18n="aboutCard3">Kripto</span>
-                    </div>
-                    <div class="about-glow"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lokasyonlar Section -->
-    <section class="section lokasyonlar" id="lokasyonlar">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" data-i18n="locBadge">Neredeyiz?</span>
-                <h2 class="section-title" data-i18n="locTitle">Ofis Lokasyonlarımız</h2>
-                <p class="section-desc" data-i18n="locDesc">İki ülkede, iki güçlü marka ile hizmetinizdeyiz.</p>
-            </div>
-            <div class="locations-grid">
-                <div class="location-card">
-                    <div class="location-map">
-                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=33.5%2C38.0%2C34.5%2C38.8&layer=mapnik&marker=38.37%2C34.03" loading="lazy" title="Aksaray Harita"></iframe>
-                    </div>
-                    <h3 data-i18n="locTR">Türkiye Merkez</h3>
-                    <h4 data-i18n="locTRCompany">Kılıç Kripto Transport A.Ş.</h4>
-                    <div class="location-info">
-                        <p><i class="fas fa-calendar-alt"></i> <span data-i18n="locTRFounded">Kuruluş: 13 Ekim 2019</span></p>
-                        <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="locTRCity">Aksaray / Ortaköy</span></p>
-                        <p><i class="fas fa-building"></i> <span data-i18n="locTRType">Logistik Bilişim ve Teknoloji A.Ş.</span></p>
-                        <p><i class="fas fa-tasks"></i> <span data-i18n="locTRServices">Taşımacılık, Yazılım, Kripto</span></p>
-                    </div>
-                    <div class="location-services">
-                        <span class="loc-tag" data-i18n="tagTransport">Taşımacılık</span>
-                        <span class="loc-tag" data-i18n="tagSoftware">Yazılım</span>
-                        <span class="loc-tag" data-i18n="tagCrypto">Kripto</span>
-                    </div>
-                </div>
-                <div class="location-card">
-                    <div class="location-map">
-                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=5.5%2C50.5%2C6.6%2C51.0&layer=mapnik&marker=50.7753%2C6.0839" loading="lazy" title="Aachen Harita"></iframe>
-                    </div>
-                    <h3 data-i18n="locDE">Almanya Ofisi</h3>
-                    <h4 data-i18n="locDECompany">Kılıç Logistik</h4>
-                    <div class="location-info">
-                        <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="locDECity">Aachen, Deutschland</span></p>
-                        <p><i class="fas fa-building"></i> <span data-i18n="locDEType">Kılıç Logistik GmbH</span></p>
-                        <p><i class="fas fa-tasks"></i> <span data-i18n="locDEServices">Uluslararası Taşımacılık</span></p>
-                    </div>
-                    <div class="location-services">
-                        <span class="loc-tag" data-i18n="tagLogistic">Lojistik</span>
-                        <span class="loc-tag" data-i18n="tagTransportDE">Transport</span>
-                        <span class="loc-tag" data-i18n="tagCustoms">Gümrük</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- İletişim Section -->
-    <section class="section iletisim" id="iletisim">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" data-i18n="contactBadge">İletişim</span>
-                <h2 class="section-title" data-i18n="contactTitle">Bize Ulaşın</h2>
-                <p class="section-desc" data-i18n="contactDesc">Projeleriniz için hemen iletişime geçin, size en uygun çözümü birlikte bulalım.</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info-cards">
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                        <h4 data-i18n="contactPhone">Telefon</h4>
-                        <p>Türkiye: +90 531 902 51 88</p>
-                        <p>Almanya: +49 176 4788 2777</p>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <h4 data-i18n="contactEmail">E-Posta</h4>
-                        <p>kiliclogistik@gmail.com</p>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                        <h4 data-i18n="contactHours">Çalışma Saatleri</h4>
-                        <p data-i18n="contactDays">Pazartesi - Cumartesi</p>
-                        <p>08:00 - 18:00</p>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name" data-i18n="formName">Ad Soyad</label>
-                            <input type="text" id="name" name="name" data-i18n-ph="formNamePH" placeholder="Adınız Soyadınız" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" data-i18n="formEmail">E-Posta</label>
-                            <input type="email" id="email" name="email" placeholder="ornek@email.com" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject" data-i18n="formSubject">Konu</label>
-                        <select id="subject" name="subject" required>
-                            <option value="" disabled selected data-i18n="formSubjectPH">Hizmet seçiniz</option>
-                            <option value="tasima" data-i18n="formSubjectOpt1">Taşımacılık & Lojistik</option>
-                            <option value="yazilim" data-i18n="formSubjectOpt2">Yazılım & Bilişim</option>
-                            <option value="kripto" data-i18n="formSubjectOpt3">Kripto & Blockchain</option>
-                            <option value="diger" data-i18n="formSubjectOpt4">Diğer</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" data-i18n="formMessage">Mesajınız</label>
-                        <textarea id="message" name="message" rows="5" data-i18n-ph="formMessagePH" placeholder="Mesajınızı yazın..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">
-                        <i class="fas fa-paper-plane"></i> <span data-i18n="formSend">Gönder</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <div class="logo-icon"><img src="img/logo.svg" alt="Kılıç Logo" width="44" height="44"></div>
-                        <div class="logo-text">
-                            <span class="logo-main">KILIÇ</span>
-                            <span class="logo-sub">KRİPTO TRANSPORT</span>
-                        </div>
-                    </div>
-                    <p data-i18n="footerDesc">Logistik Bilişim ve Teknoloji Anonim Şirketi. Türkiye ve Almanya merkezli uluslararası hizmet.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footerQuick">Hızlı Bağlantılar</h4>
-                    <ul>
-                        <li><a href="#hero" data-i18n="navHome">Ana Sayfa</a></li>
-                        <li><a href="#hizmetler" data-i18n="navServices">Hizmetler</a></li>
-                        <li><a href="#hakkimizda" data-i18n="navAbout">Hakkımızda</a></li>
-                        <li><a href="#iletisim" data-i18n="navContact">İletişim</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footerServices">Hizmetlerimiz</h4>
-                    <ul>
-                        <li><a href="#hizmetler" data-i18n="tagTransport">Taşımacılık</a></li>
-                        <li><a href="#hizmetler" data-i18n="tagSoftware">Yazılım</a></li>
-                        <li><a href="#hizmetler" data-i18n="tagCrypto">Kripto</a></li>
-                        <li><a href="#hizmetler" data-i18n="footerConsulting">Danışmanlık</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footerLocations">Lokasyonlar</h4>
-                    <ul>
-                        <li><a href="#lokasyonlar">Aksaray / Ortaköy</a></li>
-                        <li><a href="#lokasyonlar">Aachen, Almanya</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-i18n="footerCopy">&copy; 2026 Kılıç Kripto Transport Logistik Bilişim ve Teknoloji A.Ş. Tüm hakları saklıdır.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Yukarı çık">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <script src="js/i18n.js"></script>
-    <script src="js/main.js"></script>
-
-    <!-- ===== Detay Modalları ===== -->
-
-    <!-- Taşımacılık Modal -->
-    <div class="modal-overlay" id="modal-transport">
-        <div class="modal">
-            <button class="modal-close" aria-label="Kapat"><i class="fas fa-times"></i></button>
-            <div class="modal-header">
-                <img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1200&h=500&fit=crop" alt="MAN LKW">
-                <div class="modal-header-overlay">
-                    <h2><i class="fas fa-truck-fast"></i> Taşımacılık & Lojistik</h2>
-                </div>
-            </div>
-            <div class="modal-body">
-                <p class="modal-intro">Kılıç Kripto Transport olarak, Türkiye-Almanya hattında profesyonel karayolu taşımacılığı hizmeti sunuyoruz. Modern MAN TIR filomuz ve deneyimli ekibimizle yüklerinizi güvenle taşıyoruz.</p>
-                
-                <div class="modal-gallery">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop" alt="MAN TIR Filosu">
-                        <span>MAN TIR Filosu</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&h=400&fit=crop" alt="Depo Lager">
-                        <span>Depolama / Lager</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=600&h=400&fit=crop" alt="Uluslararası Taşımacılık">
-                        <span>Uluslararası Taşıma</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&h=400&fit=crop" alt="Yük Dağıtım">
-                        <span>Yük & Dağıtım</span>
-                    </div>
-                </div>
-
-                <div class="modal-details">
-                    <div class="modal-detail-card">
-                        <i class="fas fa-road"></i>
-                        <h4>Karayolu Taşımacılığı</h4>
-                        <p>Türkiye-Almanya arası düzenli sefer hatlarımızla, parsiyel ve komple yük taşımacılığı. FTL & LTL hizmetleri.</p>
-                    </div>
-                    <div class="modal-detail-card">
-                        <i class="fas fa-warehouse"></i>
-                        <h4>Depolama (Lager)</h4>
-                        <p>Türkiye ve Almanya'da modern depolama tesisleri. Kısa ve uzun süreli stok yönetimi, cross-docking hizmetleri.</p>
-                    </div>
-                    <div class="modal-detail-card">
-                        <i class="fas fa-file-contract"></i>
-                        <h4>Gümrük & Belgeler</h4>
-                        <p>Transit gümrük işlemleri, TIR karnesi, CMR belgesi ve tüm resmi evrak süreçleri.</p>
-                    </div>
-                    <div class="modal-detail-card">
-                        <i class="fas fa-satellite-dish"></i>
-                        <h4>Canlı Takip</h4>
-                        <p>GPS tabanlı araç takip sistemi ile yükünüzün nerede olduğunu anlık izleyin.</p>
-                    </div>
-                </div>
-
-                <a href="#iletisim" class="btn btn-primary modal-cta" onclick="document.getElementById('modal-transport').classList.remove('active')">
-                    <i class="fas fa-paper-plane"></i> Teklif Alın
-                </a>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <!-- Yazılım Modal -->
-    <div class="modal-overlay" id="modal-software">
-        <div class="modal">
-            <button class="modal-close" aria-label="Kapat"><i class="fas fa-times"></i></button>
-            <div class="modal-header">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=500&fit=crop" alt="Yazılım Geliştirme">
-                <div class="modal-header-overlay">
-                    <h2><i class="fas fa-code"></i> Yazılım & Bilişim</h2>
-                </div>
-            </div>
-            <div class="modal-body">
-                <p class="modal-intro">Dijital dönüşümünüzü hızlandırın. Web siteleri, mobil uygulamalar, e-ticaret platformları ve kurumsal yazılım çözümleri ile işinizi büyütün.</p>
-                
-                <div class="modal-gallery">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Web Geliştirme">
-                        <span>Web Geliştirme</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop" alt="Mobil Uygulama">
-                        <span>Mobil Uygulama</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="E-Ticaret">
-                        <span>E-Ticaret</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Dashboard & ERP">
-                        <span>Dashboard & ERP</span>
-                    </div>
-                </div>
-
-                <div class="modal-details">
-                    <div class="modal-detail-card">
-                        <i class="fas fa-globe"></i>
-                        <h4>Web Uygulamaları</h4>
-                        <p>Modern, hızlı ve SEO uyumlu web siteleri. React, Next.js ve Node.js teknolojileri.</p>
-                    </div>
-                    <div class="modal-detail-card">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>Mobil Uygulama</h4>
-                        <p>iOS ve Android için native ve cross-platform mobil uygulamalar.</p>
-                    </div>
-                    <div class="modal-detail-card">
-                        <i class="fas fa-shopping-cart"></i>
-                        <h4>E-Ticaret</h4>
-                        <p>Ödeme entegrasyonlu, stok yönetimli profesyonel e-ticaret platformları.</p>
-                    </div>
-                    <div class="modal-detail-card">
-                        <i class="fas fa-cogs"></i>
-                        <h4>Kurumsal Yazılım</h4>
-                        <p>ERP, CRM, muhasebe ve iş süreçleri yönetim yazılımları.</p>
-                    </div>
-                </div>
-
-                <a href="#iletisim" class="btn btn-primary modal-cta" onclick="document.getElementById('modal-software').classList.remove('active')">
-                    <i class="fas fa-paper-plane"></i> Teklif Alın
-                </a>
-            </div>
-        </div>
+    <div class="hero-bottom">
+      <div class="stats-card reveal">
+        <div class="stat"><span class="ic">🌍</span><b data-count="25" data-suffix="+">0</b><span>Countries Served</span></div>
+        <div class="stat"><span class="ic">🚚</span><b data-count="25000" data-suffix="+">0</b><span>Shipments / Year</span></div>
+        <div class="stat"><span class="ic">🤝</span><b data-count="500" data-suffix="+">0</b><span>Happy Customers</span></div>
+        <div class="stat"><span class="ic">🛡️</span><b data-count="99.7" data-suffix="%">0</b><span>On-Time Delivery</span></div>
+      </div>
+      <div class="track-box reveal">
+        <h3>Track Your Shipment</h3>
+        <form class="track-form" id="trackForm">
+          <input type="text" id="trackInput" placeholder="Enter your tracking number" aria-label="Tracking number">
+          <button class="btn btn-gold" type="submit">Track Now <span class="arr">→</span></button>
+        </form>
+        <div class="track-msg" id="trackMsg"></div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- Kripto Modal -->
-    <div class="modal-overlay" id="modal-crypto">
-        <div class="modal">
-            <button class="modal-close" aria-label="Kapat"><i class="fas fa-times"></i></button>
-            <div class="modal-header">
-                <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&h=500&fit=crop" alt="Kripto Blockchain">
-                <div class="modal-header-overlay">
-                    <h2><i class="fab fa-bitcoin"></i> Kripto & Blockchain</h2>
-                </div>
-            </div>
-            <div class="modal-body">
-                <p class="modal-intro">Blockchain teknolojisi ve kripto para dünyasında profesyonel danışmanlık. Akıllı kontratlar, merkeziyetsiz finans (DeFi) ve kripto ödeme entegrasyonları.</p>
-                
-                <div class="modal-gallery">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=600&h=400&fit=crop" alt="Bitcoin Trading">
-                        <span>Kripto Piyasalar</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?w=600&h=400&fit=crop" alt="Blockchain Network">
-                        <span>Blockchain Ağı</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1622630998477-20aa696ecb05?w=600&h=400&fit=crop" alt="NFT & DeFi">
-                        <span>DeFi Çözümleri</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1642104704074-907c0698cbd9?w=600&h=400&fit=crop" alt="Smart Contract">
-                        <span>Akıllı Kontrat</span>
-                    </div>
-                </div>
-
-                <div class="modal-details">
-                    <div class="modal-detail-card">
-                        <i class="fas fa-link"></i>
-                        <h4>Blockchain Danışmanlığı</h4>
-                        <p>İşletmenize uygun blockchain çözümleri ve strateji planlaması.</p>
-                    </div>
-                    <div class="modal-detail-card">
-                        <i class="fas fa-file-code"></i>
-                        <h4>Akıllı Kontrat</h4>
-                        <p>Solidity ile güvenli akıllı kontrat geliştirme ve denetim (audit) hizmetleri.</p>
-                    </div>
-                    <div class="modal-detail-card">
-                        <i class="fas fa-wallet"></i>
-                        <h4>Kripto Ödeme</h4>
-                        <p>Web sitenize veya uygulamanıza kripto para ödeme entegrasyonu.</p>
-                    </div>
-                    <div class="modal-detail-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h4>DeFi Platformları</h4>
-                        <p>Merkeziyetsiz finans uygulamaları, yield farming ve likidite havuzları.</p>
-                    </div>
-                </div>
-
-                <a href="#iletisim" class="btn btn-primary modal-cta" onclick="document.getElementById('modal-crypto').classList.remove('active')">
-                    <i class="fas fa-paper-plane"></i> Teklif Alın
-                </a>
-            </div>
-        </div>
+<!-- ================= SERVICES ================= -->
+<section class="services container" id="services">
+  <div class="cards-5">
+    <div class="scard reveal">
+      <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 16V6a1 1 0 011-1h12v11M14 9h4l4 4v3h-3"/><circle cx="6.5" cy="18.5" r="2"/><circle cx="17.5" cy="18.5" r="2"/></svg></div>
+      <h3>Road Freight</h3>
+      <p>Full &amp; part load transportation across Europe via our vetted carrier network.</p>
+      <a href="#quote">Learn more <span class="arr">→</span></a>
     </div>
+    <div class="scard reveal">
+      <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg></div>
+      <h3>Groupage Services</h3>
+      <p>Cost-effective LTL solutions with regular weekly departures on key corridors.</p>
+      <a href="#quote">Learn more <span class="arr">→</span></a>
+    </div>
+    <div class="scard reveal">
+      <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div>
+      <h3>Customs Solutions</h3>
+      <p>Fast and reliable customs clearance across EU and Türkiye borders.</p>
+      <a href="#quote">Learn more <span class="arr">→</span></a>
+    </div>
+    <div class="scard reveal">
+      <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/></svg></div>
+      <h3>Warehousing</h3>
+      <p>Strategic partner warehouse locations in Europe and Türkiye.</p>
+      <a href="#quote">Learn more <span class="arr">→</span></a>
+    </div>
+    <div class="scard reveal">
+      <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4M6 12l3-3 3 2 4-4"/></svg></div>
+      <h3>Logistics Technology</h3>
+      <p>Real-time visibility and smart digital logistics solutions.</p>
+      <a href="#quote">Learn more <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
 
+<!-- ================= NETWORK + PERFORMANCE ================= -->
+<section class="duo container" id="network">
+  <div class="network-card reveal" id="about">
+    <svg class="map-bg" viewBox="0 0 400 380"><g id="miniDots"></g>
+      <path d="M150 110 C 210 140, 250 200, 300 250" stroke="#e3b04b" stroke-width="2" fill="none" stroke-dasharray="6 6"/>
+      <circle cx="150" cy="110" r="4" fill="#e3b04b"/><circle cx="300" cy="250" r="4" fill="#e3b04b"/>
+    </svg>
+    <div class="k-eyebrow">Strong network. Wide coverage.</div>
+    <h2>We Deliver Across Europe</h2>
+    <p>Through our trusted carrier network, we provide daily connections between major cities in Europe and Türkiye — managed end-to-end by one dedicated forwarding team.</p>
+    <span class="corridor-chip">🇩🇪 Germany ↔ Türkiye 🇹🇷 &nbsp;·&nbsp; our core corridor</span>
+    <a class="link" href="#quote">Explore our network <span class="arr">→</span></a>
+  </div>
+
+  <div class="perf-card reveal" id="performance">
+    <div class="perf-head">
+      <div>
+        <div class="k-eyebrow" style="color:var(--gold-2)">Real-time insights</div>
+        <h2>Live Performance</h2>
+      </div>
+      <select class="select" aria-label="Period"><option>This Week</option><option>This Month</option><option>This Year</option></select>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="ring"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><b data-count="12408">0</b><span>Active Shipments</span></div>
+      <div class="kpi"><div class="ring"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 9h18M9 15l2 2 4-4"/></svg></div><b data-count="96.4" data-suffix="%">0</b><span>On-Time Performance</span></div>
+      <div class="kpi"><div class="ring"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><b data-count="1892">0</b><span>Disruptions Avoided</span></div>
+      <div class="kpi"><div class="ring"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 21c0-7 4-13 14-16-1 10-6 14-13 14"/><path d="M5 21c1-4 4-8 9-10"/></svg></div><b data-count="2345" data-suffix=" t">0</b><span>CO₂ Saved</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUOTE ================= -->
+<section class="quote container" id="quote">
+  <div class="quote-card reveal">
+    <div>
+      <div class="k-eyebrow">Request a quote</div>
+      <h2>Let's move your freight.</h2>
+      <p>Tell us your route and cargo — our team responds within one business day with a competitive offer from our carrier network.</p>
+    </div>
+    <form class="qform" id="quoteForm">
+      <input type="text" placeholder="Company name" required>
+      <input type="email" placeholder="E-mail address" required>
+      <select required>
+        <option value="" disabled selected>Pickup country</option>
+        <option>Germany</option><option>Türkiye</option><option>Netherlands</option><option>Austria</option><option>France</option><option>Other (Europe)</option>
+      </select>
+      <select required>
+        <option value="" disabled selected>Delivery country</option>
+        <option>Türkiye</option><option>Germany</option><option>Netherlands</option><option>Austria</option><option>France</option><option>Other (Europe)</option>
+      </select>
+      <input class="full" type="text" placeholder="Cargo details (weight, pallets, type)">
+      <button class="btn btn-gold" type="submit">Get My Quote <span class="arr">→</span></button>
+      <div class="qmsg" id="qMsg"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top">
+          <svg class="logo-k" width="38" height="38" viewBox="0 0 48 48" fill="none">
+            <path d="M8 4 H16 V44 H8 Z" fill="#e3b04b"/>
+            <path d="M20 24 L38 4 H30 L16 20 V28 L30 44 H38 Z" fill="#e3b04b"/>
+          </svg>
+          <span><span class="brand-name" style="font-size:1.1rem">KILIÇ</span><br><span class="brand-sub">LOGISTICS</span></span>
+        </a>
+        <p>Freight forwarding between Germany, Europe and Türkiye — powered by a trusted carrier network.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Road Freight</a>
+        <a href="#services">Groupage</a>
+        <a href="#services">Customs Solutions</a>
+        <a href="#services">Warehousing</a>
+        <!-- future: <a href="#fleet">Fleet Services</a> -->
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#about">About Us</a>
+        <a href="#network">Network</a>
+        <a href="#quote">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@kiliclogistics.eu">info@kiliclogistics.eu</a>
+        <a href="#">Germany ↔ Türkiye corridor</a>
+        <a href="#">Mon–Fri · 08:00–18:00 CET</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Kilic Logistics. All rights reserved.</span>
+      <span>kiliclogistics.de · kiliclogistics.eu</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+  // Europe dot-matrix (stylized): rows of dots forming a rough Europe + Anatolia silhouette
+  const rows=[
+    "                                    ██                  ",
+    "                                  ████                  ",
+    "                 ██             ██████                  ",
+    "                ████          ████████                  ",
+    "                 ██          █████████                  ",
+    "       ██                   ██████████                  ",
+    "      ████        ████████████████████                  ",
+    "       ██       ██████████████████████                  ",
+    "               ███████████████████████                  ",
+    "             ███████████████████████████                ",
+    "            ██████████████████████████████              ",
+    "           ████████████████████████████████             ",
+    "          ████████████████████ ████████████             ",
+    "          ███████████████████   ██████████              ",
+    "        █████████████████████    ████████████████       ",
+    "       ████████████████ █████     ███████████████████   ",
+    "      █████████████████  ███       ██████████████████   ",
+    "       ███████████████    ██        ████████████████    ",
+    "        ███████████       ██          ████████████      ",
+    "         ████████          █                            ",
+    "          ██████                                        ",
+    "           ███                                          "
+  ];
+  const g=document.getElementById('euDots');
+  const x0=560,y0=40,step=15.5;
+  let svgDots='';
+  rows.forEach((row,r)=>{
+    [...row].forEach((ch,c)=>{
+      if(ch==='█'){
+        const jx=(Math.sin(r*7+c)*2), jy=(Math.cos(c*5+r)*2);
+        const big=Math.random()<.06;
+        svgDots+=`<circle cx="${x0+c*step+jx}" cy="${y0+r*step+jy}" r="${big?2.6:1.6}" fill="${big?'#9ccaff':'#3f6fa8'}" opacity="${big?0.95:0.65}"/>`;
+      }
+    });
+  });
+  g.innerHTML=svgDots;
+
+  // mini map dots for network card
+  const mg=document.getElementById('miniDots');
+  let mini='';
+  for(let i=0;i<70;i++){
+    const x=40+Math.random()*330, y=40+Math.random()*300;
+    mini+=`<circle cx="${x}" cy="${y}" r="${Math.random()<.15?3:1.6}" fill="#e3b04b" opacity="${.25+Math.random()*.5}"/>`;
+  }
+  mg.innerHTML=mini;
+
+  // reveal on scroll
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}}),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // count-up
+  const fmt=(v,dec)=>dec?v.toFixed(1):Math.round(v).toLocaleString('de-DE');
+  const cio=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target,target=parseFloat(el.dataset.count),suf=el.dataset.suffix||'',dec=String(el.dataset.count).includes('.');
+    const t0=performance.now(),dur=1600;
+    const tick=t=>{const p=Math.min((t-t0)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=fmt(target*ease,dec)+suf;if(p<1)requestAnimationFrame(tick);};
+    requestAnimationFrame(tick);cio.unobserve(el);
+  }),{threshold:.4});
+  document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+  // forms (demo)
+  document.getElementById('trackForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const v=document.getElementById('trackInput').value.trim();
+    document.getElementById('trackMsg').textContent=v?`Tracking ${v} — live tracking will be available soon.`:'Please enter a tracking number.';
+  });
+  document.getElementById('quoteForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    document.getElementById('qMsg').textContent='Thank you! Your request has been received — we will reply within one business day.';
+    e.target.reset();
+  });
+</script>
 </body>
 </html>
